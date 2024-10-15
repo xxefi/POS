@@ -1,0 +1,6 @@
+node_modules/
+obj/
+bin/
+.vs/
+.idea/
+POS-план.txt
