@@ -181,5 +181,7 @@
   "workingHours": "Рабочие часы",
   "brandSetting": "Настройки бренда",
   "finance": "Финансы",
-  "productReturn": "Возврат продукта"
+  "productReturn": "Возврат продукта",
+  "canCustomerBalanceBeNegative": "Может ли баланс клиента быть отрицательным?",
+  "selectedTerminalAccount": "Выбранный счет терминала"
 }

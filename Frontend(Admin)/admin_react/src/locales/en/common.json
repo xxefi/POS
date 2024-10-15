@@ -183,5 +183,7 @@
   "workingHours": "Working Hours",
   "brandSetting": "Brand setting",
   "finance": "Finance",
-  "productReturn": "Product Return"
+  "productReturn": "Product Return",
+  "canCustomerBalanceBeNegative": "Can customer balance be negative?",
+  "selectedTerminalAccount": "Selected terminal account"
 }

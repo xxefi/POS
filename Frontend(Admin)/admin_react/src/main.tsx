@@ -1,5 +1,6 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
+import "rsuite/dist/rsuite.min.css";
 import "../i18n.ts";
 import {
   ThemeProvider as MUIThemeProvider,

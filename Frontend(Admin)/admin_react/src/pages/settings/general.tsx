@@ -9,25 +9,36 @@ import { SelectChangeEvent } from "@mui/material";
 
 export default function General() {
   const { t } = useTranslation("common");
-  const [settings, setSettings] = useState({
-    brandName: "",
-    tin: "",
-    wifiName: "",
-    wifiPassword: "",
-    cashRegister: "",
-    timezone: "",
-    language: "",
-    currency: "",
-    googleMapsUrl: "",
-    city: "",
-    zip: "",
-    address: "",
-    phone: "",
-    socialNetworks: "",
-    workingHours: "",
-    canCustomerBalanceBeNegative: false,
-    selectedTerminalAccount: "",
-  });
+  const [settingsList, setSettingsList] = useState([
+    {
+      brandName: "",
+      tin: "",
+      wifiName: "",
+      wifiPassword: "",
+      cashRegister: "",
+      timezone: "",
+      language: "",
+      currency: "",
+      googleMapsUrl: "",
+      city: "",
+      zip: "",
+      address: "",
+      phone: "",
+      socialNetworks: "",
+      workingHours: "",
+    },
+    {
+      canCustomerBalanceBeNegative: false,
+      selectedTerminalAccount: "",
+    },
+    {
+      returnPolicy: "",
+      productReturn: false,
+      returnOfDiscountedReceipt: false,
+      maximumDayOfProductReturn: 0,
+      returnsStorage: "",
+    },
+  ]);
 
   useEffect(() => {
     document.title = t("general");
@@ -38,18 +49,18 @@ export default function General() {
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement> | SelectChangeEvent
   ) => {
-    const target = e.target as HTMLInputElement | HTMLSelectElement;
-    const { name, value } = target;
+    const { name, type, checked, value } = e.target as HTMLInputElement;
 
-    const isCheckbox = target.type === "checkbox";
-    const newValue = isCheckbox
-      ? (e.target as HTMLInputElement).checked
-      : value;
+    const newValue = type === "checkbox" ? checked : value;
 
-    setSettings((prevSettings) => ({
-      ...prevSettings,
-      [name]: newValue,
-    }));
+    setSettingsList((prevSettings) => {
+      const updatedSettings = [...prevSettings];
+      updatedSettings[tabIndex] = {
+        ...updatedSettings[tabIndex],
+        [name]: newValue,
+      };
+      return updatedSettings;
+    });
   };
 
   const handleTabChange = (e: SyntheticEvent, newValue: number) => {
@@ -67,7 +78,7 @@ export default function General() {
         <Box sx={{ mt: 2 }}>
           <GeneralSettingsForm
             tabIndex={tabIndex}
-            settings={settings}
+            settings={settingsList[tabIndex]}
             handleChange={handleChange}
             t={t}
           />

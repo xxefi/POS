@@ -180,5 +180,7 @@
   "workingHours": "Çalışma Saatleri",
   "brandSetting": "Marka ayarı",
   "finance": "Finans",
-  "productReturn": "Ürün İadesi"
+  "productReturn": "Ürün İadesi",
+  "canCustomerBalanceBeNegative": "Müşteri bakiyesi negatif olabilir mi?",
+  "selectedTerminalAccount": "Seçilen terminal hesabı"
 }

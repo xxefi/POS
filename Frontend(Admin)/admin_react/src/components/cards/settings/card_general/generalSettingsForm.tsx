@@ -1,19 +1,10 @@
-import {
-  Checkbox,
-  FormControlLabel,
-  FormControl,
-  InputLabel,
-  Select,
-  SelectChangeEvent,
-} from "@mui/material";
-import { ChangeEvent, Fragment } from "react";
+import { Checkbox, Form, Input, SelectPicker, InputNumber } from "rsuite";
+import { ChangeEvent, CSSProperties, Fragment } from "react";
 
 interface SettingsFormProps {
   tabIndex: number;
   settings: Record<string, any>;
-  handleChange: (
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement> | SelectChangeEvent
-  ) => void;
+  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
   t: (key: string) => string;
 }
 
@@ -23,74 +14,139 @@ export default function GeneralSettingsForm({
   handleChange,
   t,
 }: SettingsFormProps) {
-  const handleSelectChange = (event: SelectChangeEvent) => {
-    const { name, value } = event.target;
+  const handleSelectChange = (value: string, name: string) => {
     handleChange({
       target: { name, value },
     } as ChangeEvent<HTMLSelectElement>);
+  };
+
+  const renderField = (key: string, value: any) => {
+    const isCheckbox = typeof value === "boolean";
+    const inputType =
+      key === "wifiPassword"
+        ? "password"
+        : typeof value === "number"
+        ? "number"
+        : "text";
+
+    const formRowStyle: CSSProperties = {
+      display: "flex",
+      alignItems: "center",
+      marginBottom: "16px",
+    };
+
+    const labelStyle: CSSProperties = {
+      width: "20%",
+      textAlign: "left",
+      paddingRight: "16px",
+    };
+
+    const inputStyle: CSSProperties = {
+      width: "30%",
+    };
+
+    if (isCheckbox) {
+      return (
+        <div key={key} style={formRowStyle}>
+          <Checkbox
+            checked={value}
+            onChange={(checked) =>
+              handleChange({
+                target: { name: key, value: checked },
+              } as ChangeEvent<HTMLInputElement>)
+            }
+          >
+            {t(key)}
+          </Checkbox>
+        </div>
+      );
+    }
+
+    if (typeof value === "number") {
+      return (
+        <div key={key} style={formRowStyle}>
+          <Form.ControlLabel style={labelStyle}>{t(key)}</Form.ControlLabel>
+          <InputNumber
+            value={value}
+            onChange={(newValue) =>
+              handleChange({
+                target: { name: key, value: newValue },
+              } as ChangeEvent<HTMLInputElement>)
+            }
+            style={inputStyle}
+          />
+        </div>
+      );
+    }
+
+    return (
+      <div key={key} style={formRowStyle}>
+        <Form.ControlLabel style={labelStyle}>{t(key)}</Form.ControlLabel>
+        <Input
+          type={inputType}
+          name={key}
+          value={value}
+          onChange={(value) =>
+            handleChange({
+              target: { name: key, value },
+            } as ChangeEvent<HTMLInputElement>)
+          }
+          style={inputStyle}
+        />
+      </div>
+    );
   };
 
   return (
     <Fragment>
       {tabIndex === 0 && (
         <div>
-          {Object.entries(settings).map(([key, value]) => (
-            <div className="flex items-center mb-4" key={key}>
-              <label className="w-1/3 block font-medium text-left">
-                {t(key)}
-              </label>
-              <input
-                type={key === "wifiPassword" ? "password" : "text"}
-                name={key}
-                value={value}
-                onChange={handleChange}
-                className="w-1/3 p-1 border rounded ml-2"
-              />
-            </div>
-          ))}
+          {Object.entries(settings).map(([key, value]) =>
+            renderField(key, value)
+          )}
         </div>
       )}
 
       {tabIndex === 1 && (
         <div>
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={settings.canCustomerBalanceBeNegative}
-                onChange={handleChange}
-                name="canCustomerBalanceBeNegative"
+          {renderField(
+            "canCustomerBalanceBeNegative",
+            settings.canCustomerBalanceBeNegative
+          )}
+          <div style={{ marginTop: "16px" }}>
+            <Form.Group
+              controlId="selectedTerminalAccount"
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Form.ControlLabel style={{ width: "30%" }}>
+                {t("selectedTerminalAccount")}
+              </Form.ControlLabel>
+              <SelectPicker
+                data={[]}
+                value={settings.selectedTerminalAccount}
+                onChange={(value) =>
+                  handleSelectChange(value, "selectedTerminalAccount")
+                }
+                style={{ width: "70%" }}
               />
-            }
-            label={t("canCustomerBalanceBeNegative")}
-          />
-
-          <FormControl
-            variant="outlined"
-            sx={{ display: "flex", mt: 2, minWidth: 200, marginBottom: "10px" }}
-          >
-            <InputLabel>{t("selectedTerminalAccount")}</InputLabel>
-            <Select
-              name="selectedTerminalAccount"
-              value={settings.selectedTerminalAccount}
-              onChange={handleSelectChange}
-              label={t("selectedTerminalAccount")}
-            ></Select>
-          </FormControl>
+            </Form.Group>
+          </div>
         </div>
       )}
 
       {tabIndex === 2 && (
         <div>
-          <label className="w-1/3 block font-medium text-left">
-            {t("returnPolicy")}
-          </label>
-          <input
-            type="text"
-            name="returnPolicy"
-            value={settings.returnPolicy}
-            onChange={handleChange}
-            className="w-1/3 p-1 border rounded ml-2"
-          />
+          {[
+            "returnPolicy",
+            "productReturn",
+            "returnOfDiscountedReceipt",
+            "maximumDayOfProductReturn",
+            "returnsStorage",
+          ].map((key) => renderField(key, settings[key]))}
         </div>
       )}
     </Fragment>

@@ -180,5 +180,7 @@
   "workingHours": "Arbeitszeit",
   "brandSetting": "Markeneinstellung",
   "finance": "Finanzen",
-  "productReturn": "Produktrückgabe"
+  "productReturn": "Produktrückgabe",
+  "canCustomerBalanceBeNegative": "Kann der Kundensaldo negativ sein?",
+  "selectedTerminalAccount": "Ausgewähltes Terminalkonto"
 }

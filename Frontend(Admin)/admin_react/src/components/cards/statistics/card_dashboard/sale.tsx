@@ -1,6 +1,7 @@
 import { CardData } from "../../../interfaces/cards.data.ts";
 import { useTranslation } from "react-i18next";
 import { formattedAmount } from "../../../interfaces/formatters.item.ts";
+import { Panel, Divider, Stack } from "rsuite";
 
 export default function SaleCard({
   title,
@@ -14,29 +15,33 @@ export default function SaleCard({
 
   return (
     <div className="tw-whitespace-nowrap tw-mr-2">
-      <div className="shadow-2xl rounded bg-white min-h-[140px] rounded-xl w-full flex justify-center items-center">
-        <div className="rs-panel-body p-8 w-72 text-center">
+      <Panel
+        className="min-h-[140px] w-full flex justify-center items-center"
+        bodyFill
+        style={{
+          boxShadow:
+            "0px 4px 8px rgba(0, 0, 0, 0.05), 0px 12px 10px rgba(0, 0, 0, 0.1)",
+          borderRadius: "8px",
+        }}
+      >
+        <div className="p-8 w-72 text-center">
           <h4
-            className="mb-1 overflow-hidden text-ellipsis whitespace-nowrap"
+            className="mb-1 overflow-hidden text-ellipsis whitespace-nowrap font-medium text-base"
             title={t(title)}
           >
             {t(title)}
           </h4>
           <span className="font-medium text-black">
-            <span className="text-empty text-gray-600 text-base opacity-90 tw-block tw-truncate">
+            <span className="text-empty text-gray-600 text-base opacity-100 tw-block tw-truncate">
               {formattedAmount(amount, amountType, t)}
             </span>
           </span>
-          <hr className="my-2" />
-          <div className="flex justify-between items-center">
-            <div>
-              <span className="text-gray-600 text-sm">
-                <span className="tw-truncate">
-                  {formattedAmount(yesterdayAmount, amountType, t)}
-                </span>
-              </span>
-            </div>
-            <div className="flex items-center">
+          <Divider className="my-2" />
+          <Stack justifyContent="space-between" alignItems="center">
+            <span className="text-gray-600 text-sm tw-truncate">
+              {formattedAmount(yesterdayAmount, amountType, t)}
+            </span>
+            <Stack alignItems="center">
               <svg
                 viewBox="0 0 24 24"
                 role="presentation"
@@ -48,10 +53,10 @@ export default function SaleCard({
                 ></path>
               </svg>
               <span>{percentage}%</span>
-            </div>
-          </div>
+            </Stack>
+          </Stack>
         </div>
-      </div>
+      </Panel>
     </div>
   );
 }

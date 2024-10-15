@@ -181,5 +181,7 @@
   "workingHours": "労働時間",
   "brandSetting": "ブランド設定",
   "finance": "ファイナンス",
-  "productReturn": "製品の返品"
+  "productReturn": "製品の返品",
+  "canCustomerBalanceBeNegative": "顧客残高がマイナスになることはありますか?",
+  "selectedTerminalAccount": "選択した端末アカウント"
 }
