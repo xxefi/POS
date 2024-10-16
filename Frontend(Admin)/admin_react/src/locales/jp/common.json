@@ -181,6 +181,7 @@
   "workingHours": "労働時間",
   "brandSetting": "ブランド設定",
   "finance": "ファイナンス",
+  "select": "選択",
   "productReturn": "製品の返品",
   "canCustomerBalanceBeNegative": "顧客残高がマイナスになることはありますか?",
   "selectedTerminalAccount": "選択した端末アカウント",
@@ -200,5 +201,10 @@
   "productQuantityVisibility": "製品数量の可視性",
   "mainTerminal": "メインターミナル",
   "adminPassword": "管理者パスワード",
-  "removeProduct": "商品を削除"
+  "removeProduct": "商品を削除",
+  "calculationMethod": "計算方法",
+  "percentAge": "パーセンテージ",
+  "priority": "優先順位",
+  "constructor": "コンストラクタ",
+  "stationConstructor": "ステーションコンストラクタ"
 }

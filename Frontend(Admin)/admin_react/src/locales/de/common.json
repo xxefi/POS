@@ -180,6 +180,7 @@
   "workingHours": "Arbeitszeit",
   "brandSetting": "Markeneinstellung",
   "finance": "Finanzen",
+  "select": "Wählen",
   "productReturn": "Produktrückgabe",
   "canCustomerBalanceBeNegative": "Kann der Kundensaldo negativ sein?",
   "selectedTerminalAccount": "Ausgewähltes Terminalkonto",
@@ -199,5 +200,10 @@
   "productQuantityVisibility": "Produktmengensichtbarkeit",
   "mainTerminal": "Hauptterminal",
   "adminPassword": "Admin-Passwort",
-  "removeProduct": "Produkt entfernen"
+  "removeProduct": "Produkt entfernen",
+  "calculationMethod": "Berechnungsmethode",
+  "percentAge": "Prozentsatz",
+  "priority": "Priorität",
+  "constructor": "Konstrukteur",
+  "stationConstructor": "Stationskonstrukteur"
 }

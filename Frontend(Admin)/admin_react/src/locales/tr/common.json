@@ -179,7 +179,8 @@
   "socialNetworks": "Sosyal Ağlar",
   "workingHours": "Çalışma Saatleri",
   "brandSetting": "Marka ayarı",
-  "finance": "Finans",
+  "finance": "Seçme",
+  "select": "Seç",
   "productReturn": "Ürün İadesi",
   "canCustomerBalanceBeNegative": "Müşteri bakiyesi negatif olabilir mi?",
   "selectedTerminalAccount": "Seçilen terminal hesabı",
@@ -199,5 +200,10 @@
   "productQuantityVisibility": "Ürün miktarı görünürlüğü",
   "mainTerminal": "Ana terminal",
   "adminPassword": "Yönetici parolası",
-  "removeProduct": "Ürünü kaldır"
+  "removeProduct": "Ürünü kaldır",
+  "calculationMethod": "Hesaplama Yöntemi",
+  "percentAge": "Yüzde",
+  "priority": "Öncelik",
+  "constructor": "Yapıcı",
+  "stationConstructor": "İstasyon Yapıcısı"
 }

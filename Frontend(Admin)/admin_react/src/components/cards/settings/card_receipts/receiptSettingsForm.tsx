@@ -1,5 +1,6 @@
-import { Checkbox, Form, Input, SelectPicker } from "rsuite";
 import { ChangeEvent, CSSProperties, Fragment } from "react";
+import { Form } from "rsuite";
+import { Checkbox, Input, SelectPicker } from "rsuite";
 
 interface SettingsFormProps {
   tabIndex: number;
@@ -13,7 +14,8 @@ const renderSelectField = (
   value: any,
   handleSelectChange: (value: string, name: string) => void,
   label: string,
-  options: { label: string; value: string }[]
+  options: { label: string; value: string }[],
+  t: (key: string) => string
 ) => (
   <div key={key} style={formRowStyle}>
     <Form.ControlLabel style={labelStyle}>{label}</Form.ControlLabel>
@@ -22,6 +24,7 @@ const renderSelectField = (
       value={value}
       onChange={(value) => handleSelectChange(value, key)}
       style={inputStyle}
+      placeholder={t("select")}
     />
   </div>
 );
@@ -42,7 +45,7 @@ const inputStyle: CSSProperties = {
   width: "20%",
 };
 
-export default function TerminalSettingsForm({
+export default function ReceiptSettingsForm({
   tabIndex,
   settings,
   handleChange,
@@ -64,13 +67,18 @@ export default function TerminalSettingsForm({
   const renderField = (key: string, value: any) => {
     const inputType = getInputType(key, value);
 
-    if (key === "terminalLanguageOptions" || key === "mainTerminalOptions")
-      return;
-
+    if (key === "receiptsLanguageOptions") return;
     const options = settings[`${key}Options`] || [];
 
-    if (key === "terminalLanguage" || key === "mainTerminal")
-      return renderSelectField(key, value, handleSelectChange, t(key), options);
+    if (key === "receiptsLanguage")
+      return renderSelectField(
+        key,
+        value,
+        handleSelectChange,
+        t(key),
+        options,
+        t
+      );
 
     if (inputType === "checkbox") {
       return (

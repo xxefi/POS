@@ -204,3 +204,14 @@ export interface GeneralSettingsData {
   socialNetworks: string;
   workingHours: string;
 }
+
+export interface TaxeData {
+  id: number;
+  name: string;
+  type: string;
+  calculationMethod: string;
+  percentAge: number;
+  status: boolean;
+  priority: number;
+  createdAt: string;
+}

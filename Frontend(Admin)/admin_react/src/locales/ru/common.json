@@ -157,6 +157,7 @@
   "service": "Услуга",
   "food": "Еда",
   "actions": "Доставка",
+  "action": "Действия",
   "title": "Заголовок",
   "webAccess": "Веб-доступ",
   "terminalAccess": "Терминальный доступ",
@@ -181,6 +182,7 @@
   "workingHours": "Рабочие часы",
   "brandSetting": "Настройки бренда",
   "finance": "Финансы",
+  "select": "Выбрать",
   "productReturn": "Возврат продукта",
   "canCustomerBalanceBeNegative": "Может ли баланс клиента быть отрицательным?",
   "selectedTerminalAccount": "Выбранный счет терминала",
@@ -200,5 +202,10 @@
   "productQuantityVisibility": "Видимость количества продукта",
   "mainTerminal": "Основной терминал",
   "adminPassword": "Пароль администратора",
-  "removeProduct": "Удалить продукт"
+  "removeProduct": "Удалить продукт",
+  "calculationMethod": "Метод расчета",
+  "percentAge": "Процент",
+  "priority": "Приоритет",
+  "constructor": "Конструктор",
+  "stationConstructor": "Конструктор отдела"
 }

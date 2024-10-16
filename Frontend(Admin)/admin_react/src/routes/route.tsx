@@ -53,6 +53,8 @@ import UserLayout from "../layouts/userLayout.tsx";
 import UserCreate from "../components/cards/staff/card_user/userCreate.tsx";
 import RoleLayout from "../layouts/roleLayout.tsx";
 import RoleCreate from "../components/cards/staff/card_roles/roleCreate.tsx";
+import TaxeLayout from "../layouts/taxeLayout.tsx";
+import TaxeCreate from "../components/cards/settings/card_taxes/taxeCreate.tsx";
 
 export const routes: RouteConfig[] = [
   {
@@ -205,7 +207,14 @@ export const routes: RouteConfig[] = [
         children: [
           { path: "general", element: <General /> },
           { path: "terminal", element: <SettingsTerminal /> },
-          { path: "taxes", element: <Taxes /> },
+          {
+            path: "taxes",
+            element: <TaxeLayout />,
+            children: [
+              { path: "taxes", element: <Taxes /> },
+              { path: "create", element: <TaxeCreate /> },
+            ],
+          },
           { path: "receipts", element: <SettingsReceipts /> },
           { path: "subscriptions", element: <Subscriptions /> },
           { path: "tableManagement", element: <TableManagement /> },

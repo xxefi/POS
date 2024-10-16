@@ -182,6 +182,7 @@
   "workingHours": "İş saatları",
   "brandSetting": "Brend tənzimləmələri",
   "finance": "Maliyyə",
+  "select": "Seç",
   "productReturn": "Geri qaytarılma",
   "canCustomerBalanceBeNegative": "Müştəri balansı mənfi ola bilərmi?",
   "selectedTerminalAccount": "Seçilmiş terminal hesabı",
@@ -201,5 +202,10 @@
   "productQuantityVisibility": "Məhsul miqdarı görünürlüğü",
   "mainTerminal": "Əsas terminal",
   "adminPassword": "Admin şifrəsi",
-  "removeProduct": "Məhsulu sil"
+  "removeProduct": "Məhsulu sil",
+  "calculationMethod": "Hesablama metodu",
+  "percentAge": "Faiz",
+  "priority": "Prioritet",
+  "constructor": "Konstruktor",
+  "stationConstructor": "Stansiya Konstruktoru"
 }

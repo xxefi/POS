@@ -183,6 +183,7 @@
   "workingHours": "Working Hours",
   "brandSetting": "Brand setting",
   "finance": "Finance",
+  "select": "Select",
   "productReturn": "Product Return",
   "canCustomerBalanceBeNegative": "Can customer balance be negative?",
   "selectedTerminalAccount": "Selected terminal account",
@@ -202,5 +203,10 @@
   "productQuantityVisibility": "Product quantity visibility",
   "mainTerminal": "Main terminal",
   "adminPassword": "Admin password",
-  "removeProduct": "Remove product"
+  "removeProduct": "Remove product",
+  "calculationMethod": "Calculation Method",
+  "percentAge": "Percent Age",
+  "priority": "Priority",
+  "constructor": "Constructor",
+  "stationConstructor": "Station Constructor"
 }
