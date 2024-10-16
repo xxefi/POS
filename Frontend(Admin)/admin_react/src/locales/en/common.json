@@ -185,5 +185,22 @@
   "finance": "Finance",
   "productReturn": "Product Return",
   "canCustomerBalanceBeNegative": "Can customer balance be negative?",
-  "selectedTerminalAccount": "Selected terminal account"
+  "selectedTerminalAccount": "Selected terminal account",
+  "returnOfDiscountedReceipt": "Return of discounted receipt",
+  "maximumDayOfProductReturn": "Maximum day of product return",
+  "returnsStorage": "Returns Storage",
+  "terminalSettings": "Terminal Settings",
+  "localNetwork": "Local network",
+  "actionsThatRequireAdminPassword": "Actions that require admin password",
+  "terminalLanguage": "Terminal language",
+  "applyServiceChargeRate": "Apply service charge rate",
+  "serviceChargePercentage": "Service charge percent age",
+  "multipleTerminalPermissions": "Multiple terminal permissions",
+  "singleReceiptAccess": "Single receipt access",
+  "autoPrintReceipts": "Auto print receipts",
+  "showClientsInTerminal": "Show clients in terminal",
+  "productQuantityVisibility": "Product quantity visibility",
+  "mainTerminal": "Main terminal",
+  "adminPassword": "Admin password",
+  "removeProduct": "Remove product"
 }

@@ -184,5 +184,22 @@
   "finance": "Maliyyə",
   "productReturn": "Geri qaytarılma",
   "canCustomerBalanceBeNegative": "Müştəri balansı mənfi ola bilərmi?",
-  "selectedTerminalAccount": "Seçilmiş terminal hesabı"
+  "selectedTerminalAccount": "Seçilmiş terminal hesabı",
+  "returnOfDiscountedReceipt": "Endirimli qəbzin qaytarılması",
+  "maximumDayOfProductReturn": "Məhsulun qaytarılması üçün maksimum gün",
+  "returnsStorage": "Geri qaytarılma anbarları",
+  "terminalSettings": "Terminal parametrləri",
+  "localNetwork": "Local şəbəkə",
+  "actionsThatRequireAdminPassword": "Administrator şifrəsini tələb edən əməliyyatlar",
+  "terminalLanguage": "Terminal dili",
+  "applyServiceChargeRate": "Xidmət haqqı dərəcəsini tətbiq et",
+  "serviceChargePercentage": "Xidmət haqqının faizi",
+  "multipleTerminalPermissions": "Bir neçə terminal icazəsi",
+  "singleReceiptAccess": "Tək qəbzə giriş",
+  "autoPrintReceipts": "Qəbzləri avtomatik çap et",
+  "showClientsInTerminal": "Terminalda müştəriləri göstər",
+  "productQuantityVisibility": "Məhsul miqdarı görünürlüğü",
+  "mainTerminal": "Əsas terminal",
+  "adminPassword": "Admin şifrəsi",
+  "removeProduct": "Məhsulu sil"
 }

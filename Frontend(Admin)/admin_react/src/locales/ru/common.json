@@ -183,5 +183,22 @@
   "finance": "Финансы",
   "productReturn": "Возврат продукта",
   "canCustomerBalanceBeNegative": "Может ли баланс клиента быть отрицательным?",
-  "selectedTerminalAccount": "Выбранный счет терминала"
+  "selectedTerminalAccount": "Выбранный счет терминала",
+  "returnOfDiscountedReceipt": "Возврат чека со скидкой",
+  "maximumDayOfProductReturn": "Максимальный день возврата товара",
+  "returnsStorage": "Хранение возвратов",
+  "terminalSettings": "Настройки терминала",
+  "localNetwork": "Локальная сеть",
+  "actionsThatRequireAdminPassword": "Действия требующие пароля администратора",
+  "terminalLanguage": "Язык терминала",
+  "applyServiceChargeRate": "Применить ставку обслуживания",
+  "serviceChargePercentage": "Процент обслуживания",
+  "multipleTerminalPermissions": "Множественные разрешения терминала",
+  "singleReceiptAccess": "Доступ к одному чеку",
+  "autoPrintReceipts": "Автоматическая печать чеков",
+  "showClientsInTerminal": "Показать клиентов в терминале",
+  "productQuantityVisibility": "Видимость количества продукта",
+  "mainTerminal": "Основной терминал",
+  "adminPassword": "Пароль администратора",
+  "removeProduct": "Удалить продукт"
 }

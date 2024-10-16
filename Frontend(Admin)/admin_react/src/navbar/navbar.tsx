@@ -35,7 +35,7 @@ export default function Navbar() {
         <a href="/" className="text-gray-800 text-decoration-none">
           <span className="text-lg font-semibold">POS</span>
         </a>
-        <div className="flex mr-3">
+        <div className="flex mr-5">
           <LanguageSwitcher />
           <span className="flex items-center ml-2">{t("currentLanguage")}</span>
         </div>

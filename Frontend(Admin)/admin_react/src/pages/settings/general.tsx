@@ -9,6 +9,7 @@ import { SelectChangeEvent } from "@mui/material";
 
 export default function General() {
   const { t } = useTranslation("common");
+  const tabNames = [t("brandSetting"), t("finance"), t("productReturn")];
   const [settingsList, setSettingsList] = useState([
     {
       brandName: "",
@@ -30,28 +31,38 @@ export default function General() {
     {
       canCustomerBalanceBeNegative: false,
       selectedTerminalAccount: "",
+      selectedTerminalAccountOptions: [],
     },
     {
-      returnPolicy: "",
       productReturn: false,
       returnOfDiscountedReceipt: false,
       maximumDayOfProductReturn: 0,
       returnsStorage: "",
+      returnsStorageOptions: [],
     },
   ]);
 
   useEffect(() => {
-    document.title = t("general");
-  }, [t]);
+    document.title = `${t("general")} / ${tabNames[tabIndex]}`;
+  }, [t, tabNames]);
 
   const [tabIndex, setTabIndex] = useState(0);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement> | SelectChangeEvent
   ) => {
-    const { name, type, checked, value } = e.target as HTMLInputElement;
+    const target = e.target as HTMLInputElement | HTMLSelectElement;
+    const { name, type } = target;
 
-    const newValue = type === "checkbox" ? checked : value;
+    let newValue: string | boolean | number;
+
+    if (type === "checkbox") {
+      newValue = (target as HTMLInputElement).checked;
+    } else if (type === "number") {
+      newValue = parseFloat(target.value);
+    } else {
+      newValue = target.value;
+    }
 
     setSettingsList((prevSettings) => {
       const updatedSettings = [...prevSettings];
@@ -64,12 +75,15 @@ export default function General() {
   };
 
   const handleTabChange = (e: SyntheticEvent, newValue: number) => {
+    e.target;
     setTabIndex(newValue);
   };
 
   return (
     <div>
-      <span className="text-gray-500 font-medium text-xl">{t("general")}</span>
+      <span className="text-gray-500 font-medium text-xl">
+        {t("general")} / {tabNames[tabIndex]}
+      </span>
       <div className="p-2">
         <GeneralSettingsTabs
           tabIndex={tabIndex}
@@ -92,6 +106,7 @@ export default function General() {
             textTransform: "none",
             boxShadow: "none",
             borderRadius: "10px",
+            marginTop: "20px",
             "&:hover": {
               backgroundColor: "#388e3c",
             },

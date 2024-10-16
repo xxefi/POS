@@ -182,5 +182,22 @@
   "finance": "Finanzen",
   "productReturn": "Produktrückgabe",
   "canCustomerBalanceBeNegative": "Kann der Kundensaldo negativ sein?",
-  "selectedTerminalAccount": "Ausgewähltes Terminalkonto"
+  "selectedTerminalAccount": "Ausgewähltes Terminalkonto",
+  "returnOfDiscountedReceipt": "Rückgabe der ermäßigten Quittung",
+  "maximumDayOfProductReturn": "Maximaler Tag der Produktrückgabe",
+  "returnsStorage": "Retourenlager",
+  "terminalSettings": "Terminaleinstellungen",
+  "localNetwork": "Lokales Netzwerk",
+  "actionsThatRequireAdminPassword": "Aktionen, die ein Administratorkennwort erfordern",
+  "terminalLanguage": "Terminal Sprache",
+  "applyServiceChargeRate": "Servicegebührensatz anwenden",
+  "serviceChargePercentage": "Servicegebühr Prozentsatz",
+  "multipleTerminalPermissions": "Mehrere Terminalberechtigungen",
+  "singleReceiptAccess": "Einzelbelegzugriff",
+  "autoPrintReceipts": "Belege automatisch drucken",
+  "showClientsInTerminal": "Kunden im Terminal anzeigen",
+  "productQuantityVisibility": "Produktmengensichtbarkeit",
+  "mainTerminal": "Hauptterminal",
+  "adminPassword": "Admin-Passwort",
+  "removeProduct": "Produkt entfernen"
 }

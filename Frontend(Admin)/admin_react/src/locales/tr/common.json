@@ -182,5 +182,22 @@
   "finance": "Finans",
   "productReturn": "Ürün İadesi",
   "canCustomerBalanceBeNegative": "Müşteri bakiyesi negatif olabilir mi?",
-  "selectedTerminalAccount": "Seçilen terminal hesabı"
+  "selectedTerminalAccount": "Seçilen terminal hesabı",
+  "returnOfDiscountedReceipt": "İndirimli makbuzun iadesi",
+  "maximumDayOfProductReturn": "Maksimum ürün iade günü",
+  "returnsStorage": "Depolamayı İade Ediyor",
+  "terminalSettings": "Terminal Ayarları",
+  "localNetwork": "Yerel Ağ",
+  "actionsThatRequireAdminPassword": "Yönetici parolası gerektiren eylemler",
+  "terminalLanguage": "Terminal Dili",
+  "applyServiceChargeRate": "Hizmet ücreti oranını uygula",
+  "serviceChargePercentage": "Hizmet ücreti yüzdesi",
+  "multipleTerminalPermissions": "Birden fazla terminal izni",
+  "singleReceiptAccess": "Tek fiş erişimi",
+  "autoPrintReceipts": "Fişleri otomatik yazdır",
+  "showClientsInTerminal": "Terminalda müşterileri göster",
+  "productQuantityVisibility": "Ürün miktarı görünürlüğü",
+  "mainTerminal": "Ana terminal",
+  "adminPassword": "Yönetici parolası",
+  "removeProduct": "Ürünü kaldır"
 }

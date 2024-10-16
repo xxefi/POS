@@ -9,7 +9,7 @@ import {
 import { ComponentProps } from "../components/interfaces/component.props";
 
 export default function Settings({ t, setOpen, open }: ComponentProps) {
-  const renderStatisticsItem = (item: SettingsItem) => (
+  const renderSettingItem = (item: SettingsItem) => (
     <li key={item.to}>
       <Button
         component={NavLink}
@@ -53,16 +53,20 @@ export default function Settings({ t, setOpen, open }: ComponentProps) {
         </svg>
       </button>
       <div
-        className={`overflow-hidden bg-white rounded-xl mt-1 transition-all duration-500 ease-in-out ${
-          open ? "max-h-64" : "max-h-0 overflow-hidden"
+        className={`bg-white rounded-xl mt-1 overflow-hidden transition-all duration-500 ease-in-out ${
+          open
+            ? "max-h-[400px] scale-y-100 opacity-100"
+            : "max-h-0 scale-y-50 opacity-0"
         }`}
+        style={{ transformOrigin: "top" }}
       >
         <ul
-          className={`list-none p-0 transition-opacity duration-500 ${
-            open ? "opacity-100" : "opacity-0"
-          }`}
+          className={`list-none p-0 transition-opacity duration-500`}
+          style={{
+            pointerEvents: open ? "auto" : "none",
+          }}
         >
-          {settingsItem.map(renderStatisticsItem)}
+          {settingsItem.map(renderSettingItem)}
         </ul>
       </div>
     </li>

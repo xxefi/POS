@@ -42,7 +42,7 @@ const inputStyle: CSSProperties = {
   width: "50%",
 };
 
-export default function GeneralSettingsForm({
+export default function TerminalSettingsForm({
   tabIndex,
   settings,
   handleChange,
@@ -64,15 +64,12 @@ export default function GeneralSettingsForm({
   const renderField = (key: string, value: any) => {
     const inputType = getInputType(key, value);
 
-    if (
-      key == "selectedTerminalAccountOptions" ||
-      key == "returnsStorageOptions"
-    )
+    if (key === "terminalLanguageOptions" || key === "mainTerminalOptions")
       return;
 
     const options = settings[`${key}Options`] || [];
 
-    if (key === "selectedTerminalAccount" || key === "returnsStorage")
+    if (key === "terminalLanguage" || key === "mainTerminal")
       return renderSelectField(key, value, handleSelectChange, t(key), options);
 
     if (inputType === "checkbox") {

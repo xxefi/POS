@@ -2,15 +2,15 @@ import { Tabs, Tab } from "@mui/material";
 import { CSSProperties, SyntheticEvent } from "react";
 import { useTranslation } from "react-i18next";
 
-interface SettingsTabsProps {
+interface TerminalTabsProps {
   tabIndex: number;
   handleTabChange: (e: SyntheticEvent, newValue: number) => void;
 }
 
-export default function GeneralSettingsTabs({
+export default function TerminalSettingsTabs({
   tabIndex,
   handleTabChange,
-}: SettingsTabsProps) {
+}: TerminalTabsProps) {
   const { t } = useTranslation("common");
 
   const tabsStyle: CSSProperties = {
@@ -24,9 +24,9 @@ export default function GeneralSettingsTabs({
       aria-label="settings tabs"
       sx={{ marginLeft: "-23px" }}
     >
-      <Tab label={t("brandSetting")} style={tabsStyle} />
-      <Tab label={t("finance")} style={tabsStyle} />
-      <Tab label={t("productReturn")} style={tabsStyle} />
+      <Tab label={t("terminalSettings")} style={tabsStyle} />
+      <Tab label={t("localNetwork")} style={tabsStyle} />
+      <Tab label={t("actionsThatRequireAdminPassword")} style={tabsStyle} />
     </Tabs>
   );
 }

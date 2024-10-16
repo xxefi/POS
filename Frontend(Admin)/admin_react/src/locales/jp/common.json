@@ -183,5 +183,22 @@
   "finance": "ファイナンス",
   "productReturn": "製品の返品",
   "canCustomerBalanceBeNegative": "顧客残高がマイナスになることはありますか?",
-  "selectedTerminalAccount": "選択した端末アカウント"
+  "selectedTerminalAccount": "選択した端末アカウント",
+  "returnOfDiscountedReceipt": "割引レシートの返却",
+  "maximumDayOfProductReturn": "商品返却の最長日",
+  "returnsStorage": "返品保管場所",
+  "terminalSettings": "ターミナル設定",
+  "localNetwork": "ローカルネットワーク",
+  "actionsThatRequireAdminPassword": "管理者パスワードが必要な操作",
+  "terminalLanguage": "ターミナル言語",
+  "applyServiceChargeRate": "サービス料金率を適用",
+  "serviceChargePercentage": "サービス料金のパーセンテージ",
+  "multipleTerminalPermissions": "複数のターミナル権限",
+  "singleReceiptAccess": "単一レシートアクセス",
+  "autoPrintReceipts": "レシートを自動印刷",
+  "showClientsInTerminal": "ターミナルにクライアントを表示",
+  "productQuantityVisibility": "製品数量の可視性",
+  "mainTerminal": "メインターミナル",
+  "adminPassword": "管理者パスワード",
+  "removeProduct": "商品を削除"
 }
