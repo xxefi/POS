@@ -9,7 +9,6 @@ import {
 } from "@mui/material/styles";
 import AppRoutes from "./routes/appRoutes";
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
 
 const muiTheme = createTheme({});
 
