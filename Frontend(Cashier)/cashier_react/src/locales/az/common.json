@@ -1,0 +1,18 @@
+{
+  "currentLanguage": "Azərbaycan",
+  "pagenotfound": "Səhifə tapılmadı",
+  "sorrymessage": "Üzr istəyirik, axtardığınız səhifə mövcud deyil.",
+  "back": "Geri",
+  "restaurantAltText": "Rahat restoran atmosferi",
+  "loginHeader": "Daxil ol",
+  "brandLabel": "Brend adı",
+  "brandPlaceholder": "Brend adını daxil edin",
+  "passwordLabel": "Şifrə",
+  "passwordPlaceholder": "Şifrəni daxil edin",
+  "pinCodeLabel": "PIN kod",
+  "pinCodePlaceholder": "4 rəqəmli PIN kodunu daxil edin",
+  "next": "İrəli",
+  "login": "Daxil ol",
+  "pinCodeLengthError": "PIN-Kod uzunluqu 4 olmalıdı",
+  "remove": "Sil"
+}

@@ -157,6 +157,7 @@
   "service": "Service",
   "food": "Food",
   "actions": "Actions",
+  "action": "Action",
   "manager": "Manager",
   "garson": "Garson",
   "title": "Title",
@@ -208,5 +209,7 @@
   "percentAge": "Percent Age",
   "priority": "Priority",
   "constructor": "Constructor",
-  "stationConstructor": "Station Constructor"
+  "stationConstructor": "Station Constructor",
+  "receiptsLanguage": "Receipts Language",
+  "printTwice": "Print Twice"
 }

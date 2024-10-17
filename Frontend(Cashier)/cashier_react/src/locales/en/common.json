@@ -1,0 +1,18 @@
+{
+  "currentLanguage": "English",
+  "pagenotfound": "Page not found",
+  "sorrymessage": "Sorry, the page you're looking for does not exist",
+  "back": "Back",
+  "restaurantAltText": "A cozy restaurant atmosphere",
+  "loginHeader": "Login",
+  "brandLabel": "Brand Name",
+  "brandPlaceholder": "Enter your brand name",
+  "passwordLabel": "Password",
+  "passwordPlaceholder": "Enter your password",
+  "pinCodeLabel": "PIN Code",
+  "pinCodePlaceholder": "Enter your 4-digit PIN",
+  "next": "Next",
+  "login": "Login",
+  "pinCodeLengthError": "PIN code must be exactly 4 digits",
+  "remove": "Remove"
+}

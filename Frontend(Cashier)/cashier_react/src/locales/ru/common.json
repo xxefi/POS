@@ -1,0 +1,18 @@
+{
+  "currentLanguage": "Русский",
+  "pagenotfound": "Страница не найдена",
+  "sorrymessage": "К сожалению, страница, которую вы ищете, не существует.",
+  "back": "Назад",
+  "restaurantAltText": "Уютная атмосфера ресторана",
+  "loginHeader": "Вход",
+  "brandLabel": "Название бренда",
+  "brandPlaceholder": "Введите название бренда",
+  "passwordLabel": "Пароль",
+  "passwordPlaceholder": "Введите пароль",
+  "pinCodeLabel": "PIN-код",
+  "pinCodePlaceholder": "Введите 4-значный PIN-код",
+  "next": "Далее",
+  "login": "Войти",
+  "pinCodeLengthError": "PIN-код должен содержать ровно 4 цифры",
+  "remove": "Удалить"
+}

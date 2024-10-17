@@ -8,13 +8,17 @@ import {
 } from "@mui/material/styles";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes/appRoutes.tsx";
+import { Provider } from "react-redux";
+import { store } from "./redux/store.ts";
 
 const muiTheme = createTheme({});
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
-    <MUIThemeProvider theme={muiTheme}>
-      <AppRoutes />
-    </MUIThemeProvider>
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <MUIThemeProvider theme={muiTheme}>
+        <AppRoutes />
+      </MUIThemeProvider>
+    </BrowserRouter>
+  </Provider>
 );
